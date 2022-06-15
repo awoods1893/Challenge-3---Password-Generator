@@ -41,17 +41,29 @@ function generatePassword() {
 
   //If statements to determine if the user picks yes or no for each customization option
   //Need to add some sort of check here to determine if the user enters "no" then the option isn't added to the password 
-  if (charType == "y" || "yes"){
+  if (charType === "y" || "yes"){
     retVal += charSet;
   }
-  if (charType1){
+  else{
+    retVal;
+  }
+  if (charType1 === "yes" || 'y'){
     retVal += charSet1;
   }
-  if(charType2){
+  else{
+    retVal;
+  }
+  if(charType2 === "yes" || 'y'){
     retVal += charSet2;
   }
-  if (charType3){
+  else{
+    retVal;
+  }
+  if (charType3 === "yes" || 'y'){
     retVal += charSet3;
+  }
+  else{
+    retVal;
   }
 
   //randomizes the selections and creates the password based on length and character choices
