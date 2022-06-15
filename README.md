@@ -16,5 +16,6 @@
 - WHEN the password is generated
 - THEN the password is either displayed in an alert or written to the page
 
-[Website URL]()
+[Website URL](https://awoods1893.github.io/Challenge-3---Password-Generator/)
+
 ![Screenshot](./Develop/Password%20Generator.gif)
