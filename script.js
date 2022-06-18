@@ -12,10 +12,10 @@ while (length < 8 || length > 128){
 }
  
 //Prompts for the user to customize their password
- var charType = prompt("Are you using a lowercase letter?");
- var charType1 = prompt("Are you using an uppercase letter?");
- var charType2 = prompt("Are you using a number?");
- var charType3 = prompt("Are you using a special character?");
+ var charType = prompt("Are you using a lowercase letter? Y or N?").toLowerCase();
+ var charType1 = prompt("Are you using an uppercase letter? Y or N?").toLowerCase();
+ var charType2 = prompt("Are you using a number? Y or N?").toLowerCase();
+ var charType3 = prompt("Are you using a special character? Y or N?").toLowerCase();
  var password = generatePassword();
 document.getElementById('password').value = password;
 document.getElementById('generate').addEventListener('click', copyPassword);
@@ -41,25 +41,25 @@ function generatePassword() {
 
   //If statements to determine if the user picks yes or no for each customization option
   //Need to add some sort of check here to determine if the user enters "no" then the option isn't added to the password 
-  if (charType === "y" || "yes"){
+  if (charType === "y" || charType ==="yes"){
     retVal += charSet;
   }
   else{
     retVal;
   }
-  if (charType1 === "yes" || 'y'){
+  if (charType1 === "yes" || charType1 === 'y'){
     retVal += charSet1;
   }
   else{
     retVal;
   }
-  if(charType2 === "yes" || 'y'){
+  if(charType2 === "yes" || charType2 ==='y'){
     retVal += charSet2;
   }
   else{
     retVal;
   }
-  if (charType3 === "yes" || 'y'){
+  if (charType3 === "yes" || charType3 === 'y'){
     retVal += charSet3;
   }
   else{
@@ -75,7 +75,7 @@ function generatePassword() {
 
 //copies the newly generated password to the clipboard
 function copyPassword() {
-  document.getElementById("display").select();
+  document.getElementById("password").select();
   document.execCommand("Copy");
 }
 
